@@ -4,6 +4,8 @@ import 'package:minimal_ui/components/my_button.dart';
 import 'package:minimal_ui/components/my_textfield.dart';
 import 'package:minimal_ui/components/square_tile.dart';
 
+import '../services/auth_service.dart';
+
 class RegisterPage extends StatefulWidget {
   final Function()? onTap;
   const RegisterPage({
@@ -159,13 +161,15 @@ class _RegisterPageState extends State<RegisterPage> {
                 const SizedBox(height: 50),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     SquareTile(
                       imagePath: 'images/google.png',
+                      onTap: () => AuthService().signInWithGoogle(),
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     SquareTile(
                       imagePath: 'images/apple.png',
+                      onTap: () {},
                     ),
                   ],
                 ),
