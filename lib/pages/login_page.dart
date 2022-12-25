@@ -8,7 +8,7 @@ import 'package:minimal_ui/services/auth_service.dart';
 class LoginPage extends StatefulWidget {
   final Function()? onTap;
 
-  LoginPage({
+  const LoginPage({
     super.key,
     required this.onTap,
   });
